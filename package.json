@@ -1,0 +1,28 @@
+{
+  "name": "todo-pwa",
+  "version": "1.0.0",
+  "description": "A todo pwa with nextjs, redux, docker and now",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server/index.ts",
+    "build": "next build && tsc --project tsconfig.server.json",
+    "start": "NODE_ENV=production node .next/production-server/index.js"
+  },
+  "author": "Johhan Santana",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.0.0-rc.1",
+    "@zeit/next-typescript": "^1.1.0",
+    "babel-loader": "^7.1.5",
+    "next": "^6.1.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "typescript": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/next": "^6.1.2",
+    "@types/react": "^16.4.11",
+    "nodemon": "^1.18.3",
+    "ts-node": "^7.0.1"
+  }
+}
