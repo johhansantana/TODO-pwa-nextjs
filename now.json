@@ -1,0 +1,8 @@
+{
+  "name": "todo-pwa",
+  "alias": "todo-pwa",
+  "type": "docker",
+  "features": {
+    "cloud": "v2"
+  }
+}

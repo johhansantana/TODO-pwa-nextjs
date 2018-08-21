@@ -3,27 +3,27 @@
   "short_name": "Todos",
   "icons": [
     {
-      "src": "https://placehold.it/128x128",
+      "src": "/static/icons/todos128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "https://placehold.it/144x144",
+      "src": "/static/icons/todos144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "https://placehold.it/152x152",
+      "src": "/static/icons/todos152.png",
       "sizes": "152x152",
       "type": "image/png"
     },
     {
-      "src": "https://placehold.it/192x192",
+      "src": "/static/icons/todos192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://placehold.it/256x256",
+      "src": "/static/icons/todos256.png",
       "sizes": "256x256",
       "type": "image/png"
     }
