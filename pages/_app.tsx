@@ -3,6 +3,7 @@ import React from "react";
 import Head from "next/head";
 import { PersistGate } from "redux-persist/integration/react";
 import { Provider } from "react-redux";
+import * as ReactGA from "react-ga";
 import withReduxStore from "../lib/with-redux-store";
 
 type Props = {
@@ -12,6 +13,8 @@ type Props = {
 
 class MyApp extends App<Props> {
   componentDidMount() {
+    ReactGA.initialize("UA-54970249-12");
+    ReactGA.pageview(window.location.pathname + window.location.search);
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker
         .register("/service-worker.js")
