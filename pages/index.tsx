@@ -1,7 +1,7 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { addTodo } from "../actions/todos";
+import { addTodo, removeTodo } from "../actions/todos";
 import { Todos } from "../components";
 
 type State = {
@@ -10,6 +10,7 @@ type State = {
 
 type Props = {
   addTodo: (text: string) => void;
+  removeTodo: (index: number) => void;
   todos: string[];
 };
 
@@ -28,8 +29,12 @@ class Index extends React.Component<Props, State> {
       inputVal: ""
     });
   };
+  removeTodo = (index: number) => {
+    const { removeTodo } = this.props;
+    removeTodo(index);
+  };
   render() {
-    const { todos } = this.props;
+    const { todos, removeTodo } = this.props;
     const { inputVal } = this.state;
     return (
       <div className="container">
@@ -45,7 +50,7 @@ class Index extends React.Component<Props, State> {
               Add
             </button>
           </form>
-          <Todos todos={todos} />
+          <Todos todos={todos} removeTodo={removeTodo} />
         </div>
         <style jsx>{`
           :global(body) {
@@ -100,7 +105,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(
     {
-      addTodo
+      addTodo,
+      removeTodo
     },
     dispatch
   );

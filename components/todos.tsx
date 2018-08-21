@@ -1,5 +1,6 @@
 type Props = {
   todos: string[];
+  removeTodo: (index: number) => void;
 };
 
 export default (props: Props) => (
@@ -8,7 +9,10 @@ export default (props: Props) => (
       props.todos.map((todo, i) => (
         <div key={i}>
           <li className="flex-list">
-            <button className="button">Done</button> {todo}
+            <button onClick={() => props.removeTodo(i)} className="button">
+              Done
+            </button>{" "}
+            {todo}
           </li>
           <hr />
         </div>
