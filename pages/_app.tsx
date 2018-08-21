@@ -42,12 +42,14 @@ class MyApp extends App<Props> {
             href="https://fonts.googleapis.com/css?family=Roboto"
             rel="stylesheet"
           />
+          <meta name="theme-color" content="#2F3BA2" />
         </Head>
         <Provider store={reduxStore}>
           <PersistGate loading={null} persistor={persistor}>
             <Component {...pageProps} />
           </PersistGate>
         </Provider>
+        <noscript>Enable javascript to run this web app.</noscript>
       </Container>
     );
   }
