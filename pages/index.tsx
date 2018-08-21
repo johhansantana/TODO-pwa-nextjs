@@ -24,14 +24,23 @@ class Index extends React.Component<Props, State> {
   onSubmit = e => {
     e.preventDefault();
     this.props.addTodo(this.state.inputVal);
+    this.setState({
+      inputVal: ""
+    });
   };
   render() {
     const { todos } = this.props;
+    const { inputVal } = this.state;
     return (
       <div className="container">
         <div className="content">
           <form>
-            <input className="input" type="text" onChange={this.onChange} />
+            <input
+              className="input"
+              type="text"
+              onChange={this.onChange}
+              value={inputVal}
+            />
             <button className="button" type="submit" onClick={this.onSubmit}>
               Add
             </button>
