@@ -1,11 +1,13 @@
 import App, { Container } from "next/app";
 import React from "react";
 import Head from "next/head";
-import withReduxStore from "../lib/with-redux-store";
+import { PersistGate } from "redux-persist/integration/react";
 import { Provider } from "react-redux";
+import withReduxStore from "../lib/with-redux-store";
 
 type Props = {
   reduxStore: any;
+  persistor: any;
 };
 
 class MyApp extends App<Props> {
@@ -22,7 +24,7 @@ class MyApp extends App<Props> {
     }
   }
   render() {
-    const { Component, pageProps, reduxStore } = this.props;
+    const { Component, pageProps, reduxStore, persistor } = this.props;
     return (
       <Container>
         <Head>
@@ -39,7 +41,9 @@ class MyApp extends App<Props> {
           />
         </Head>
         <Provider store={reduxStore}>
-          <Component {...pageProps} />
+          <PersistGate loading={null} persistor={persistor}>
+            <Component {...pageProps} />
+          </PersistGate>
         </Provider>
       </Container>
     );
