@@ -9,6 +9,18 @@ type Props = {
 };
 
 class MyApp extends App<Props> {
+  componentDidMount() {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/service-worker.js")
+        .then(registration => {
+          console.log("service worker registration successful: ", registration);
+        })
+        .catch(err => {
+          console.warn("service worker registration failed", err.message);
+        });
+    }
+  }
   render() {
     const { Component, pageProps, reduxStore } = this.props;
     return (
@@ -20,6 +32,7 @@ class MyApp extends App<Props> {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
+          <link rel="manifest" href="/static/manifest.json" />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto"
             rel="stylesheet"
