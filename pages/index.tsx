@@ -56,7 +56,7 @@ class Index extends React.Component<Props, State> {
           :global(body) {
             margin: 0;
             padding: 0;
-            background: #f3f3f3;
+            background: linear-gradient(180deg, #c900ff, #6e00ff);
             font-family: "Roboto", sans-serif;
           }
           .container {
@@ -69,9 +69,7 @@ class Index extends React.Component<Props, State> {
             align-items: flex-start;
           }
           .content {
-            background: white;
-            border: 1px solid #e6e6e6;
-            box-shadow: 0px 3px 15px #c1c1c1;
+            background: #f9f9f9;
             padding: 15px;
             width: 500px;
           }
