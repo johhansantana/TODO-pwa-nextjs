@@ -48,9 +48,6 @@ class Index extends React.Component<Props, State> {
               value={inputVal}
               placeholder="Type and press enter"
             />
-            {/* <button className="button" type="submit" onClick={this.onSubmit}>
-              Add
-            </button> */}
           </form>
           <Todos todos={todos} removeTodo={removeTodo} />
         </div>
