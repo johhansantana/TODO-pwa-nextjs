@@ -12,8 +12,15 @@ export default (props: Props) => (
             {/* <button onClick={() => props.removeTodo(i)} className="button">
               Done
             </button>{" "} */}
-            <h4 className="h4">{todo}</h4>
-            <span className="actions">Done</span>
+            <p className="todo-title">{todo}</p>
+            <span
+              onClick={() => {
+                if (window.confirm("Remove todo?")) props.removeTodo(i);
+              }}
+              className="action-btn"
+            >
+              Done
+            </span>
           </li>
         </div>
       ))
@@ -22,11 +29,12 @@ export default (props: Props) => (
     )}
 
     <style jsx>{`
-      .actions {
+      .action-btn {
         font-size: 12px;
         opacity: 0.5;
+        cursor: pointer;
       }
-      .h4 {
+      .todo-title {
         font-size: 27px;
         margin: 0;
         opacity: 0.8;
@@ -35,13 +43,21 @@ export default (props: Props) => (
         min-height: 50px;
         border-radius: 10px;
         padding: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
         background: white;
+        margin-bottom: 15px;
       }
       .ul {
         list-style: none;
         padding-left: 0;
         font-size: 23px;
+        max-height: 68vh;
+        overflow: scroll;
+      }
+      @media screen and (orientation: landscape) {
+        .ul {
+          max-height: 50vh;
+        }
       }
       .button {
         margin-right: 5px;

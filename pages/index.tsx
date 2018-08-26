@@ -39,16 +39,18 @@ class Index extends React.Component<Props, State> {
     return (
       <div className="container">
         <div className="content">
-          <form>
+          <h1 className="title">TODO-PWA</h1>
+          <form className="form" onSubmit={this.onSubmit}>
             <input
               className="input"
               type="text"
               onChange={this.onChange}
               value={inputVal}
+              placeholder="Type and press enter"
             />
-            <button className="button" type="submit" onClick={this.onSubmit}>
+            {/* <button className="button" type="submit" onClick={this.onSubmit}>
               Add
-            </button>
+            </button> */}
           </form>
           <Todos todos={todos} removeTodo={removeTodo} />
         </div>
@@ -56,14 +58,23 @@ class Index extends React.Component<Props, State> {
           :global(body) {
             margin: 0;
             padding: 0;
-            background: linear-gradient(180deg, #c900ff, #6e00ff);
-            font-family: "Roboto", sans-serif;
+            background: linear-gradient(180deg, #c900ff, #6e00ff) no-repeat;
+            font-family: "Montserrat", sans-serif;
+          }
+          .title {
+            margin-top: 0;
+          }
+          .form {
+            display: flex;
+          }
+          input {
+            outline: none;
           }
           .container {
             width: 100vw;
-            min-height: 100vh;
-            padding-bottom: 25px;
-            padding-top: 25px;
+            height: 100vh;
+            margin-top: 25px;
+            margin-bottom: 25px;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -72,12 +83,19 @@ class Index extends React.Component<Props, State> {
             background: #f9f9f9;
             padding: 15px;
             width: 500px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            height: 90vh;
           }
           .input {
-            width: 80%;
-            height: 30px;
+            width: 100%;
             font-size: 20px;
-            border: 1px solid gray;
+            font-family: "Montserrat", sans-serif;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+            border: none;
+            height: 45px;
+            padding: 5px 10px;
+            border-radius: 10px;
           }
           :global(.button) {
             font-size: 23px;

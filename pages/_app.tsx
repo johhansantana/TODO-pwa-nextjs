@@ -39,7 +39,7 @@ class MyApp extends App<Props> {
           />
           <link rel="manifest" href="/static/manifest.json" />
           <link
-            href="https://fonts.googleapis.com/css?family=Roboto"
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700"
             rel="stylesheet"
           />
           <meta name="theme-color" content="#2F3BA2" />
