@@ -3,38 +3,38 @@
   "short_name": "Todos",
   "icons": [
     {
-      "src": "/static/icons/todos128.png",
+      "src": "/static/icons/todos-128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "/static/icons/todos144.png",
+      "src": "/static/icons/todos-144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/static/icons/todos152.png",
+      "src": "/static/icons/todos-152.png",
       "sizes": "152x152",
       "type": "image/png"
     },
     {
-      "src": "/static/icons/todos192.png",
+      "src": "/static/icons/todos-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/static/icons/todos256.png",
+      "src": "/static/icons/todos-256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "/static/icons/todos512.png",
+      "src": "/static/icons/todos-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#3E4EB8",
-  "theme_color": "#2F3BA2"
+  "background_color": "white",
+  "theme_color": "#c900ff"
 }

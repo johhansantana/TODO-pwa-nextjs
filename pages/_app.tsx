@@ -37,12 +37,13 @@ class MyApp extends App<Props> {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
+          <link rel="icon" type="image/png" href="/static/icons/favicon.png" />
           <link rel="manifest" href="/static/manifest.json" />
           <link
-            href="https://fonts.googleapis.com/css?family=Roboto"
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700"
             rel="stylesheet"
           />
-          <meta name="theme-color" content="#2F3BA2" />
+          <meta name="theme-color" content="#c900ff" />
         </Head>
         <Provider store={reduxStore}>
           <PersistGate loading={null} persistor={persistor}>
