@@ -9,9 +9,6 @@ export default (props: Props) => (
       props.todos.map((todo, i) => (
         <div className="card" key={i}>
           <li>
-            {/* <button onClick={() => props.removeTodo(i)} className="button">
-              Done
-            </button>{" "} */}
             <p className="todo-title">{todo}</p>
             <span
               onClick={() => {
@@ -53,6 +50,9 @@ export default (props: Props) => (
         font-size: 23px;
         max-height: 68vh;
         overflow: scroll;
+        padding: 0 10px;
+        margin: 0 -10px;
+        margin-top: 25px;
       }
       @media screen and (orientation: landscape) {
         .ul {

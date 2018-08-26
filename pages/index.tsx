@@ -105,7 +105,7 @@ class Index extends React.Component<Props, State> {
           }
           @media (max-width: 600px) {
             .content {
-              width: 90%;
+              width: 88%;
             }
           }
         `}</style>
