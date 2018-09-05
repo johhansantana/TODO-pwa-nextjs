@@ -11,7 +11,7 @@ COPY . .
 
 RUN npm config set unsafe-perm true
 
-RUN npm i -g yarn
+# RUN npm i -g yarn
 
 RUN yarn
 
