@@ -68,7 +68,7 @@ class Index extends React.Component<Props, State> {
             outline: none;
           }
           .container {
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             margin-top: 25px;
             margin-bottom: 25px;
